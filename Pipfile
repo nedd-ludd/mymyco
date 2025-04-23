@@ -9,6 +9,7 @@ pylint = "*"
 pydantic = "*"
 djangorestframework = "*"
 psycopg2-binary = "*"
+django-environ = "*"
 
 [dev-packages]
 
