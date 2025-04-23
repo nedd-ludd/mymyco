@@ -82,11 +82,11 @@ WSGI_APPLICATION = "mymyco.wsgi.application"
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': env('POSTGRES_NAME'),
+        'NAME': env('POSTGRES_NAME', default="mymyco"),
         'USER': env('POSTGRES_USER'),
         'PASSWORD': env('POSTGRES_PASSWORD'),
         'HOST': env('POSTGRES_HOST'),
-        'PORT': env('POSTGRES_PORT', cast=int),
+        'PORT': env('POSTGRES_PORT'),
     }
 }
 
@@ -132,3 +132,5 @@ STATIC_URL = "static/"
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+

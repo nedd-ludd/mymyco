@@ -6,7 +6,7 @@ from django.db import models
 
 
 class Species(models.Model):
-    id = models.AutoField(primary_key=True)  # or use UUID if needed
+    id = models.AutoField(primary_key=True)
     scientific_name = models.CharField(max_length=200)
     common_names = models.JSONField(default=list, blank=True, null=True)
     taxonomy_family = models.CharField(max_length=100, blank=True, null=True)
